@@ -1,0 +1,53 @@
+/* WAP to create class Author. create 3 author objects and compare who author wrote more than
+   10 books */
+
+class Author
+{
+	String fullName;
+	int booksCount;
+
+	void create(String name, int count)
+	{
+		fullName = name;
+		booksCount = count;
+	}
+}
+
+class ClassObjectEx7
+{
+	public static void main(String []args)
+	{
+		Author a1 = new Author();
+		a1.create("Smith", 13);
+
+		Author a2 = new Author();
+		a2.create("Devid", 9);
+
+		Author a3 = new Author();
+		a3.create("Mathew", 11);
+
+		Author ans = compare(a1);
+		if(ans!=null)
+		{
+			System.out.println("Author = " + ans.fullName);
+		}
+
+		ans = compare(a2);
+		if(ans!=null)
+		{
+			System.out.println("Author = " + ans.fullName);
+		}
+
+		ans = compare(a3);
+		if(ans!=null)
+		{
+			System.out.println("Author = " + ans.fullName);
+		}
+	}
+
+	public static Author compare(Author x)
+	{
+		if(x.booksCount>=10)
+			return x;
+	}
+}
